@@ -408,7 +408,7 @@ option:hover {
   color: #8ecbff;
 }
 
-@media (max-device-width: 640px) {
+@media (max-device-width: 400px) {
   .home-text h2 {
     font-size: 32px;
   }
