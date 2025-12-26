@@ -23,6 +23,12 @@ header {
   /* border: 2px solid rgba(255, 255, 255, 0); */
   background: linear-gradient(180deg, #0c1b3a, #020b1c);
 }
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
 nav a {
   margin-left: 20px;
   text-decoration: none;
@@ -83,9 +89,6 @@ section {
 }
 .home-text button:hover {
   background: rgba(28, 152, 152, 0.6);
-}
-.home-img img {
-  width: 350px;
 }
 /* CALCULATOR */
 #calculator {
@@ -409,14 +412,23 @@ option:hover {
 }
 
 @media (max-device-width: 400px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  #home{
+     width: 600px;
+  }
   .home-text h2 {
-    font-size: 32px;
+    /* display: block; */
+    font-size: 33px;
+    margin-left: 5px;
   }
   .home-text p {
     font-size: 35px;
-    left: 0px;
-    margin-right: 25px;
-    padding:  0 2px;
   }
   .buttons {
     flex-direction: column;
@@ -426,28 +438,80 @@ option:hover {
   .btn {
     width: 50%;
   }
-  .ms{
+  .ms {
     width: 50%;
     margin-right: 40px;
   }
-  .logo-container{
-     left: 0px;
+  .logo-container {
+    left: 0px;
   }
   .nav-links {
+    display: none;
     position: absolute;
     top: 90px;
     left: 100px;
-    width: 100%;
+    width: 500px;
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
     color: white;
   }
-   .nav-links.active {
+  .nav-links.active {
     display: flex;
   }
   .search-container {
     width: 90%;
     margin: 15px auto;
   }
+  .food-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  /* margin-top: 45px; */
+  }
+  #loginpage {
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #1e90ff33, #020b1c 65%);
+  z-index: 9999;
+  width: 600px;
+  height: 100vh;
+}
+header{
+  width: 600px;
+}
+#foods {
+  flex-direction: column;
+  background: radial-gradient(circle, #1e90ff33, #020b1c 49%);
+  width: 600px;
+}
+.food-card{
+   background: linear-gradient(180deg, #0c1b3a, #020b1c);
+  box-shadow: 0 0 35px #1e90ff88;
+  border-radius: 15px;
+  padding: 20pxpx;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  width: 288px;
+  height: 230px;
+  transition: 0.3s;
+  margin-left: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 2fr));
+  gap: 25px;
+}
+.foo{
+  margin-bottom: 50px;
+  padding: 20px;
+}
+#calculator {
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+}
+.home-text button:hover {
+  background: rgba(28, 152, 152, 0.6);
+}
 }
